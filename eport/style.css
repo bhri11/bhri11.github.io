@@ -1,0 +1,178 @@
+/* === Genel Ayarlar === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(135deg, #007cf0, #00dfd8);
+  color: white;
+  padding: 4rem 1rem 6rem;
+  text-align: center;
+  position: relative;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 6px solid white;
+  position: absolute;
+  bottom: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* === NAV === */
+nav {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-top: 50px;
+}
+
+.nav-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  grid-column: 2;
+}
+
+nav li {
+  margin: 0 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #007cf0;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* === Sosyal Medya İkonları === */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  grid-column: 3;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+/* === İçerik === */
+main {
+  max-width: 1000px;
+  margin: 7rem auto 3rem;
+  padding: 0 1rem;
+}
+
+section {
+  background: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #007cf0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-left: 4px solid #00dfd8;
+  padding-left: 0.5rem;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background: #f0f0f0;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* === Mobil Uyum === */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
